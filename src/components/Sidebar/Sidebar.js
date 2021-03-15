@@ -4,8 +4,11 @@ import HomeIcon from "@material-ui/icons/Home";
 import SearchIcon from "@material-ui/icons/Search";
 import LibraryMusicIcon from "@material-ui/icons/LibraryMusic";
 import "./Sidebar.css";
+import { useSelector } from "react-redux";
 
 function Sidebar() {
+  const { state } = useSelector((state) => ({ ...state }));
+  const { playlists } = state;
   return (
     <div className="sidebar">
       <img
@@ -19,6 +22,9 @@ function Sidebar() {
       <br />
       <strong className="sidebar__title">PLAYLIST</strong>
       <hr />
+      {playlists?.items?.map((playlist) => (
+        <SidebarOption title={playlist.name} />
+      ))}
       <SidebarOption title="Hip hop" />
       <SidebarOption title="Rock" />
       <SidebarOption title="Country" />
