@@ -13,8 +13,15 @@ function Footer() {
   return (
     <div className="footer">
       <div className="footer__left">
-        <img className="footer__albumLogo" src="" alt="" />
-        <div className="footer__songInfo"></div>
+        <img
+          className="footer__albumLogo"
+          src="https://i.pinimg.com/originals/90/16/31/9016314b830df1b05ffaa04196ffc1d6.jpg"
+          alt=""
+        />
+        <div className="footer__okay">
+          <div className="footer__songInfo">Element</div>
+          <div className="footer__songInfoSmall">Pop Smoke</div>
+        </div>
       </div>
 
       <div className="footer__center">
